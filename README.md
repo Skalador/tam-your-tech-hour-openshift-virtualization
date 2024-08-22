@@ -18,6 +18,7 @@
     - [Routes](#routes)
     - [Health Checks](#health-checks)
 
+**Disclaimer: Due to the amount of GIFs in this README, the page might take some time to fully load all content. You can inspect the GIFs individually (and with better resolution) in `src/video`.**
 
 # TAM your tech hour - OpenShift Virtualization
 
