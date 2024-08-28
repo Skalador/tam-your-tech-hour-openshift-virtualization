@@ -18,7 +18,7 @@
     - [Routes](#routes)
     - [Health Checks](#health-checks)
 
-**Disclaimer: Due to the amount of GIFs in this README, the page might take some time to fully load all content. You can inspect the GIFs individually (and with better resolution) in `src/video`.**
+**Disclaimer: All demonstrations as GIFs are linked via hyperlinks at the bottom of each (sub)section to reduce the loading time of the README.**
 
 # TAM your tech hour - OpenShift Virtualization
 
@@ -66,13 +66,15 @@ $ virtctl create vm \
 --cloud-init-user-data I2Nsb3VkLWNvbmZpZwpjaHBhc3N3ZDoKICBleHBpcmU6IGZhbHNlCnBhc3N3b3JkOiA0b2htLTlnZDctZzE4OAp1c2VyOiBmZWRvcmEK
 ```
 
-![Create VM](./src/video/create-vm-cli.gif)
+[Link to demonstration as GIF](./src/video/create-vm-cli.gif)
 
 ### Create VMs with the GUI
 
-![Create VM](./src/video/create-vm-gui-catalog-instance-types.gif)
+With instance types: 
+[Link to demonstration as GIF](./src/video/create-vm-gui-catalog-instance-types.gif)
 
-![Create VM](./src/video/create-vm-gui-catalog-template-catalog.gif)
+With templates catalog:
+[Link to demonstration as GIF](./src/video/create-vm-gui-catalog-template-catalog.gif)
 
 ## Migrate VMs
 
@@ -105,11 +107,11 @@ demo-vm-1         31m     Running   10.128.2.33   ocp4-worker2.aio.example.com  
 rhel-9-demo-vm    2m58s   Running   10.131.0.15   ocp4-worker3.aio.example.com   True
 ```
 
-![Migrate VM](./src/video/migrate-vm-cli.gif)
+[Link to demonstration as GIF](./src/video/migrate-vm-cli.gif)
 
 ### Migrate VMs with the GUI
 
-![Migrate VM](./src/video/migrate-vm-gui.gif)
+[Link to demonstration as GIF](./src/video/migrate-vm-gui.gif)
 
 ## Delete VMs
 
@@ -131,11 +133,11 @@ $ oc delete vm centos7-demo-vm
 virtualmachine.kubevirt.io "centos7-demo-vm" deleted
 ```
 
-![Delete VM](./src/video/delete-vm-cli.gif)
+[Link to demonstration as GIF](./src/video/delete-vm-cli.gif)
 
 ### Delete VMs via GUI
 
-![Delete VM](./src/video/delete-vm-gui.gif)
+[Link to demonstration as GIF](./src/video/delete-vm-gui.gif)
 
 
 ## Snapshot and Restore
@@ -147,11 +149,11 @@ $ oc project demo-vm
 
 ### Snapshot
 
-![Snapshot VM](./src/video/snapshot-gui.gif)
+[Link to demonstration as GIF](./src/video/snapshot-gui.gif)
 
 ### Restore
 
-![Restore VM](./src/video/restore-gui.gif)
+[Link to demonstration as GIF](./src/video/restore-gui.gif)
 
 
 ## Leverage OpenShift Features 
@@ -265,7 +267,7 @@ This is demo VM 1 :)
 This is demo VM 2 :)
 ```
 
-![Routes VM](./src/video/route-service.gif)
+[Link to demonstration as GIF](./src/video/route-service.gif)
 
 
 ### Health Checks
