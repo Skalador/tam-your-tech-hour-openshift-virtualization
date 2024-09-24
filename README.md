@@ -4,6 +4,7 @@
   - [Create VMs](#create-vms)
     - [Create VMs with the CLI](#create-vms-with-the-cli)
     - [Create VMs with the GUI](#create-vms-with-the-gui)
+    - [Create VMs with the API](#create-vms-with-the-api)
   - [Migrate VMs](#migrate-vms)
     - [Migrate VMs with the CLI](#migrate-vms-with-the-cli)
     - [Migrate VMs with the GUI](#migrate-vms-with-the-gui)
@@ -75,6 +76,31 @@ With instance types:
 
 With templates catalog:
 [Link to demonstration as GIF](./src/video/create-vm-gui-catalog-template-catalog.gif)
+
+### Create VMs with the API
+
+Obtain the token:
+```sh
+TOKEN=$(oc whoami -t)
+```
+
+Obtain the `API` endpoint with either of those commands and then build the full API endpoint `APIFULL`:
+```sh
+$ API=$(oc cluster-info | grep 'running at' | awk '{print $NF}')
+$ API=$(oc cluster-info | grep 'running at' | sed 's/.*running at //')
+
+$ APIPATH="/apis/kubevirt.io/v1/namespaces/demo-vm/virtualmachines/"
+$ APIFULL="${API}${APIPATH}"
+
+$ echo $APIFULL
+https://api.somedomain.io:6443/apis/kubevirt.io/v1/namespaces/demo-vm/virtualmachines/
+```
+
+Create a VM by sending the `json` data to the `APIFULL`:
+```sh
+$ curl -k -X POST -d @api/vm.json -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" https://api.somedomain.io:6443/apis/kubevirt.io/v1/namespaces/demo-vm/virtualmachines/
+```
+
 
 ## Migrate VMs
 
